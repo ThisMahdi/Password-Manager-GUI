@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Options</class>
+ <widget class="QMainWindow" name="Options">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>396</width>
+    <height>355</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+background-color:white;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="password">
+    <property name="geometry">
+     <rect>
+      <x>33</x>
+      <y>20</y>
+      <width>331</width>
+      <height>95</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color:#c7c7c7;
+}
+
+QLabel:hover {
+color:#a6a6a6;
+}</string>
+    </property>
+    <property name="text">
+     <string>PASSWORD</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="manager">
+    <property name="geometry">
+     <rect>
+      <x>43</x>
+      <y>100</y>
+      <width>271</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+color:#a6a6a6;
+}
+
+QLabel:hover{
+color:#c7c7c7;
+}</string>
+    </property>
+    <property name="text">
+     <string>MANAGER</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add">
+    <property name="geometry">
+     <rect>
+      <x>117</x>
+      <y>250</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font/>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+color:black;
+background-color:transparent;
+border:1px solid black;
+border-radius:4px;
+font-family:Nunito;
+}
+
+QPushButton:hover {
+color:white;
+background-color:black;
+}
+
+QPushButton:pressed{
+padding-left:5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>ADD</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="view">
+    <property name="geometry">
+     <rect>
+      <x>207</x>
+      <y>250</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font/>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+color:black;
+background-color:transparent;
+border:1px solid black;
+border-radius:4px;
+font-family:Nunito;
+}
+
+QPushButton:hover {
+color:white;
+background-color:black;
+}
+
+QPushButton:pressed{
+padding-left:5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>VIEW</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>83</x>
+      <y>200</y>
+      <width>231</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+color:#b8b8b8;
+background-color:#f2f2f2;
+border-radius:4px;
+font-family:Nunito;
+}
+
+QLabel:hover{
+color:#a6a6a6;
+}</string>
+    </property>
+    <property name="text">
+     <string>Please Choose Your Option</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="update">
+    <property name="geometry">
+     <rect>
+      <x>117</x>
+      <y>280</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font/>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+color:black;
+background-color:transparent;
+border:1px solid black;
+border-radius:4px;
+font-family:Nunito;
+}
+
+QPushButton:hover {
+color:white;
+background-color:black;
+}
+
+QPushButton:pressed{
+padding-left:5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>UPDATE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="deletepage">
+    <property name="geometry">
+     <rect>
+      <x>207</x>
+      <y>280</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font/>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+color:black;
+background-color:transparent;
+border:1px solid black;
+border-radius:4px;
+font-family:Nunito;
+}
+
+QPushButton:hover {
+color:white;
+background-color:black;
+}
+
+QPushButton:pressed{
+padding-left:5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>DELETE</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

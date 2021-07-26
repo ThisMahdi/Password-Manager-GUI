@@ -1,0 +1,9 @@
+venv/*
+.idea/*
+*.pyc
+Screenshot/*
+passwords.txt
+masterpassword.txt
+key.key
+test.py
+logo/PasswordManagerLogo.ico

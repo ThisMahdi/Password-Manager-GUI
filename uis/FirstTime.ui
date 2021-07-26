@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FirstTime</class>
+ <widget class="QMainWindow" name="FirstTime">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>396</width>
+    <height>355</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+background-color:white;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="manager">
+    <property name="geometry">
+     <rect>
+      <x>47</x>
+      <y>99</y>
+      <width>271</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+color:#a6a6a6;
+}
+
+QLabel:hover{
+color:#c7c7c7;
+}</string>
+    </property>
+    <property name="text">
+     <string>MANAGER</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="password">
+    <property name="geometry">
+     <rect>
+      <x>37</x>
+      <y>54</y>
+      <width>331</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color:#c7c7c7;
+}
+
+QLabel:hover {
+color:#a6a6a6;
+}</string>
+    </property>
+    <property name="text">
+     <string>PASSWORD</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="master1">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>198</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+border: 0;
+outline: 0;
+background: transparent;
+border-bottom: 1px solid black;
+color:#b8b8b8;
+font-family:Nunito;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string>Enter Master Password</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="master2">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>239</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+border: 0;
+outline: 0;
+background: transparent;
+border-bottom: 1px solid black;
+color:#b8b8b8;
+font-family:Nunito;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string>Confirm Master Password</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>170</y>
+      <width>311</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+color:#b8b8b8;
+background-color:#f2f2f2;
+border-radius:4px;
+font-family:Nunito;
+}
+
+QLabel:hover{
+color:#a6a6a6;
+}</string>
+    </property>
+    <property name="text">
+     <string>Please Create A Master Password And Remeber It!</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="submit">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>300</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font/>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+color:black;
+background-color:transparent;
+border:1px solid black;
+border-radius:4px;
+font-family:Nunito;
+}
+
+QPushButton:hover {
+color:white;
+background-color:black;
+}
+
+QPushButton:pressed{
+padding-left:5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Submit</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="mahdi">
+    <property name="geometry">
+     <rect>
+      <x>129</x>
+      <y>-10</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;
+text-decoration: none;
+font-family:calibri;
+background-color:#a6a6a6;
+border-radius:5px;
+padding-top:10px;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="openExternalLinks">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
