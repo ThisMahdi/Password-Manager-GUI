@@ -1,3 +1,6 @@
+# A Simple Code By ThisMahdi | Telegram : @Thisismahdi
+
+# Imports here
 from PyQt5.QtWidgets import QMainWindow, QApplication, QStackedWidget, QMessageBox, QLineEdit
 from cryptography.fernet import Fernet
 from PyQt5 import uic,QtWidgets, QtGui
@@ -17,8 +20,6 @@ def load_key():
     key = key_file.read()
     key_file.close()
     return key
-
-
 
 class FirstTime(QMainWindow):
     def __init__(self):
@@ -327,8 +328,6 @@ class Delete(QMainWindow):
                     x = msg.exec_()
 
 
-
-
 if __name__ == "__main__":
     if not os.path.isfile("key.key"):
         create_key()
@@ -356,3 +355,5 @@ if __name__ == "__main__":
         sys.exit(app.exec_())
     except SystemExit:
         print("Closing App...")
+
+# A Simple Code By ThisMahdi | Telegram : @Thisismahdi
