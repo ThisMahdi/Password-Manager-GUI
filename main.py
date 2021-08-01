@@ -10,16 +10,17 @@ import os.path
 __version__ = "1"
 __author__ = "Mahdi Yaghoubi"
 
-def create_key():
-    key = Fernet.generate_key()
-    with open("key.key","wb") as key_file:
-        key_file.write(key)
-
 def load_key():
     key_file = open("key.key","rb")
     key = key_file.read()
     key_file.close()
     return key
+
+def create_key():
+    key = Fernet.generate_key()
+    with open("key.key","wb") as key_file:
+        key_file.write(key)
+
 
 class FirstTime(QMainWindow):
     def __init__(self):
@@ -41,7 +42,7 @@ class FirstTime(QMainWindow):
             if len(self.master1.text()) > 0 or len(self.master2.text()) > 0:
                 with open('masterpassword.txt', 'w') as file:
                     encrypt = fer.encrypt(self.master1.text().encode()).decode()
-                    decrypt = fer.decrypt(bytes(encrypt.encode()))
+                    # decrypt = fer.decrypt(bytes(encrypt.encode()))
                     file.write(f"{encrypt}")
                 msg = QMessageBox()
                 msg.setWindowTitle(" ")
@@ -76,7 +77,6 @@ class FirstTime(QMainWindow):
             # showing msg box
             x = msg.exec_()
 
-
 class PasswordManager(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -107,7 +107,6 @@ class PasswordManager(QMainWindow):
             msg.setDefaultButton(QMessageBox.Retry)
             # showing msg box
             x = msg.exec_()
-
 
 class Options(QMainWindow):
     def __init__(self):
@@ -194,24 +193,22 @@ class View(QMainWindow):
         self.back.clicked.connect(self.back_function)
         self.views.setVerticalScrollBar(self.scroll)
 
-        with open("passwords.txt","r") as file:
-            fixed = []
-            for line in file.readlines():
-                name , password = line.split("|")
-                views = f"[ Name : {name} | Password : {fer.decrypt(password.encode()).decode()} ]"
-                fixed.append(views)
-
-        final = '\n'.join(fixed)
-        print(final)
-        self.views.setText(final)
-
+        if os.path.isfile("passwords.txt"):
+            with open("passwords.txt","r") as file:
+                fixed = []
+                for line in file.readlines():
+                    name , password = line.split("|")
+                    views = f"[ Name : {name} | Password : {fer.decrypt(password.encode()).decode()} ]"
+                    fixed.append(views)
+            final = '\n'.join(fixed)
+            print(final)
+            self.views.setText(final)
 
     def back_function(self):
         options = Options()
         widget.addWidget(options)
         widget.setCurrentWidget(options)
         # widget.setCurrentIndex(widget.currentIndex() - 1)
-
 
 class Update(QMainWindow):
     def __init__(self):
@@ -223,7 +220,6 @@ class Update(QMainWindow):
         self.back.clicked.connect(self.back_function)
         self.update.clicked.connect(self.update_function)
         self.newpassword.setEchoMode(QtWidgets.QLineEdit.Password)
-
 
     def back_function(self):
         options = Options()
@@ -261,7 +257,6 @@ class Update(QMainWindow):
                     msg.setDefaultButton(QMessageBox.Retry)
                     # showing msg box
                     x = msg.exec_()
-
 
 class Delete(QMainWindow):
     def __init__(self):
@@ -327,14 +322,14 @@ class Delete(QMainWindow):
                     # showing msg box
                     x = msg.exec_()
 
-
 if __name__ == "__main__":
     if not os.path.isfile("key.key"):
         create_key()
         key = load_key()
         fer = Fernet(key)
     else:
-        pass
+        key = load_key()
+        fer = Fernet(key)
     app = QApplication(sys.argv)
     widget = QStackedWidget()
     widget.setWindowIcon(QtGui.QIcon("logo/PasswordManagerLogo.jpg"))
