@@ -18,8 +18,7 @@ def load_key():
     key_file.close()
     return key
 
-key = load_key()
-fer = Fernet(key)
+
 
 class FirstTime(QMainWindow):
     def __init__(self):
@@ -333,6 +332,8 @@ class Delete(QMainWindow):
 if __name__ == "__main__":
     if not os.path.isfile("key.key"):
         create_key()
+        key = load_key()
+        fer = Fernet(key)
     else:
         pass
     app = QApplication(sys.argv)
