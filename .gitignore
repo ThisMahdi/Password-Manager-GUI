@@ -1,4 +1,5 @@
 venv/*
+screenshots/*
 .idea/*
 *.pyc
 Screenshot/*

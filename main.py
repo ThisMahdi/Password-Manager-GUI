@@ -41,8 +41,8 @@ class FirstTime(QMainWindow):
             if len(self.master1.text()) > 0 or len(self.master2.text()) > 0:
                 with open('masterpassword.txt', 'w') as file:
                     encrypt = fer.encrypt(self.master1.text().encode()).decode()
-                    decrypt = fer.decrypt(encrypt)
-                    file.write(f"{encrypt}\n{decrypt}")
+                    decrypt = fer.decrypt(bytes(encrypt.encode()))
+                    file.write(f"{encrypt}")
                 msg = QMessageBox()
                 msg.setWindowTitle(" ")
                 msg.setText(f"Password Succsesfully Created. \nWrite It Down : \n\n{self.master1.text()}")
